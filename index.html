@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+    crossorigin="anonymous"/>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <title>Weather Dashboard</title>
+</head>
+
+<body>
+    <header class="header">
+        <h1>Weather Dashboard</h1>
+    </header>
+
+    <div class="container">
+        <div class="searchArea">
+            <div class="col-sm-4 bg-light">
+                <h1>Search for a City:</h1>
+            </div>
+            <div class="row">
+                <input type="text" class="search" id="input">
+                <button type="submit" class="btn bg-primary" id="searchBtn"><i class="fas fa-search"></i></button>
+            </div>
+            <div class="history"></div>
+        </div>
+        <div class="forecast">
+            <h2 id="cityName">City <div><img id="icon" src="" alt="weatherIcon"></div></h2>
+            <h2 id="date"></h1>
+        </div>
+        <div class="row">
+            <p class="temperature">Temperature: <span id="temperature"></span></p>
+        </div>
+        <div class="row">
+            <p class="humidity">Humidity: <span id="humidity"></span></p>
+        </div>
+        <div class="row">
+            <p class="windSpeed">Wind Speed: <span id="windSpeed"></span></p>
+        </div>
+        <div class="row">
+            <p class="uvIndex">UV Index: <span id="uvIndex"></span></p>
+        </div>
+    </div>
+
+    <div class="bottomContainer">
+        <h1>5-Day Forecast:</h1>
+        <div class="card row"></div>
+    </div>
+
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="./assets/js/script.js"></script>
+</body>
+
+</html>
