@@ -6,50 +6,71 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
-    crossorigin="anonymous"/>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
     <link rel="stylesheet" href="./assets/css/style.css">
     <title>Weather Dashboard</title>
 </head>
 
 <body>
-    <header class="header">
+    <header class="jumbotron container-fluid text-center p-4" style="background-color: #404040; color:white;">
         <h1>Weather Dashboard</h1>
     </header>
-
-    <div class="container">
-        <div class="searchArea">
-            <div class="col-sm-4 bg-light">
-                <h1>Search for a City:</h1>
+    <div class="row">
+        <div class="col-sm-4 bg-light text-center">
+            <h2>Search for a City:</h2>
+            <div class="input-group mb-3">
+                <input type="text" class="form-control " id="cityEl">
+                <button type="submit" class="btn bg-primary " id="searchBtn"><i class="fas fa-search"></i></button>
+            </div>
+            <div id="list"></div>
+        </div>
+        <div class="col-sm-8">
+            <div class="row ml-2 border border-dark rounded">
+                <div class="col-sm-12">
+                    <h2 id="cityName"></h2>
+                    <div><img id="icon" src=""></div>
+                    <p>Temperature: <span id="temperature"></span></p>
+                    <p>Humidity:  <span id="humidity"></span></p>
+                    <p>Wind Speed: <span id="windSpeed"></span></p>
+                    <p>UV index: <span class="current bg-danger rounded p-2 text-white" id="uvIndex"></span></p>
+                </div>
             </div>
             <div class="row">
-                <input type="text" class="search" id="input">
-                <button type="submit" class="btn bg-primary" id="searchBtn"><i class="fas fa-search"></i></button>
+                <div class="col-12">
+                    <h2>5-Day Forecast</h2>
+                </div>
             </div>
-            <div class="history"></div>
-        </div>
-        <div class="forecast">
-            <h2 id="cityName">City <div><img id="icon" src="" alt="weatherIcon"></div></h2>
-            <h2 id="date"></h1>
-        </div>
-        <div class="row">
-            <p class="temperature">Temperature: <span id="temperature"></span></p>
-        </div>
-        <div class="row">
-            <p class="humidity">Humidity: <span id="humidity"></span></p>
-        </div>
-        <div class="row">
-            <p class="windSpeed">Wind Speed: <span id="windSpeed"></span></p>
-        </div>
-        <div class="row">
-            <p class="uvIndex">UV Index: <span id="uvIndex"></span></p>
+            <div class="row" id="listEl">
+                <div class="col-sm-2 bg-primary forecast text-white m-3 p-2 rounded" >
+                    <p id="day1"></p>
+                    <p>Temperature: <span id="temperature1"></span></p>
+                    <p>Humidity: <span id="humid1"></span></p>
+                </div>
+                <div class="col-sm-2 bg-primary forecast text-white m-3 p-2 rounded" >
+                    <p id="day2"></p>
+                    <p>Temperature: <span id="temperature2"></span></p>
+                    <p>Humidity: <span id="humid2"></span></p>
+                </div>
+                <div class="col-sm-2 bg-primary forecast text-white m-3 p-2 rounded">
+                    <p id="day3"></p>
+                    <p>Temperature: <span id="temperature3"></span></p>
+                    <p>Humidity: <span id="humid3"></span></p>
+                </div>
+                <div class="col-sm-2 bg-primary forecast text-white m-3 p-2 rounded">
+                    <p id="day4"></p>
+                    <p>Temperature: <span id="temperature4"></span></p>
+                    <p>Humidity: <span id="humid4"></span></p>
+                </div>
+                <div class="col-sm-2 bg-primary forecast text-white m-3 p-2 rounded" >
+                    <p id="day5"></p>
+                    <p>Temperature: <span id="temperature5"></span></p>
+                    <p>Humidity: <span id="humid5"></span></p>
+                </div>
+            </div>
         </div>
     </div>
 
-    <div class="bottomContainer">
-        <h1>5-Day Forecast:</h1>
-        <div class="card row"></div>
-    </div>
 
 
 
